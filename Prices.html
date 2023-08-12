@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Price</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Niconne" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="Index.html">Canberra Restaurants</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Restaurants.html">Restaurants</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Cuisines.html">Cuisines</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Dishes.html">Dishes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Prices.html">Prices</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Locations.html">Locations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ContactAbout.html">Contact & About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="intro2" style="margin-top:70px">Prices List of Resturants</h1>
+    <p class="intro3">From Cheap to Fine Dinning</p>
+    <p class="intro3"> Click one of that to get more information:</p>
+
+    <div class="row">
+        <div class="column" onclick="openTab('b1');" style="background:green;">Cheap eats</div>
+        <div class="column" onclick="openTab('b2');" style="background-color:burlywood;">Mid-range</div>
+        <div class="column" onclick="openTab('b3');" style="background-color: grey ;">Fine dining</div>
+    </div>
+
+
+    <div id="b1" class="containerTab" style="display:none;background:green">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 col-xs-12 welcome-image">
+                    <h3 class="niconne">Blu Ginger</h3>
+                    <center class="header-text-2">if you have cheap buget looking for cheap and easy one you can go to Blu Ginger</center>
+                    <p>The food in their menu most expensive is $22</p>
+                </div>
+                <div class="col-md-3 offset-md-1 col-sm-3 offset-sm-1 col-xs-12 welcome-image">
+                    <div class="row">
+                        <img src="images/location/bluginger_logo.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="b2" class="containerTab" style="display:none;background-color: burlywood">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 col-xs-12 welcome-image">
+                    <h3 class="niconne">Belluci’s Italian</h3>
+                    <center class="header-text-2">if you have normal buget looking for less expensive one you can pick Belluci’s Italian</center>
+                    <p>They have food in their menu less than 40$</p>
+                </div>
+                <div class="col-md-3 offset-md-1 col-sm-3 offset-sm-1 col-xs-12 welcome-image">
+                    <div class="row">
+                        <img src="images/location/bellucis_logo.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="b3" class="containerTab" style="display:none;background:grey">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-1 col-sm-6 offset-sm-1 col-xs-12 welcome-image">
+                    <h3 class="niconne">Chairman & Yip </h3>
+                    <center class="header-text-2">if you have high buget looking for expensive one you can pick chairman & Yip.  </center>
+                    <p>Set1 for $68.50 per person</p>
+                    <p>Set2 for $88 per person</p>
+                </div>
+                <div class="col-md-3 offset-md-1 col-sm-3 offset-sm-1 col-xs-12 welcome-image">
+                    <div class="row">
+                        <div><img src="images/location/chairman_logo.jpg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+        }
+    </script>
+
+    <hr class="hr">
+    <footer>
+        <p>ⓒ 2020 - Canberra Resutaurants All Rights Reserved</p>
+    </footer>
+</body>
+</html>
